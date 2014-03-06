@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Google Maps Demo</title>
+  <style>
+    .map-box {
+      border: 1px solid black;
+      width: 800px;
+      height: 300px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+ 
+<div id="map" class="map-box">
+  Google map here...
+</div>
+ 
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+<script src="assets/javascript/gmap3.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $("#map").gmap3({
+      marker:{
+        address:"3 City Road, Auckland, New Zealand",
+      },
+      map:{
+        options:{
+          zoom:15,
+          mapTypeControl: true,
+          navigationControl: true,
+          scrollwheel: true,
+          streetViewControl: false
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
